@@ -38,10 +38,10 @@ const TextFlash = ({ intro }: Props) => {
 	}, [intro.fragments.length]);
 	return (
 		<div
-			className={`w-full h-screen ${bgColor} flex justify-center items-center text-xl text-center font-customBlack ${textColor}`}
+			className={`w-full h-screen overflow-hidden ${bgColor} flex justify-center items-center text-xl text-center font-customBlack ${textColor}`}
 			key={intro._id}>
 			<div className="w-3/4">
-				<p className="uppercase drop-shadow-3xl">
+				<p className="uppercase drop-shadow-1xl">
 					{intro.fragments[currentIndex]?.fragment}
 				</p>
 			</div>

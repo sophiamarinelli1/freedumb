@@ -25,7 +25,7 @@ export const revalidate = 60;
 export default async function Home() {
 	const intros: Intro[] = await getIntro();
 	return (
-		<div className="">
+		<div className="h-screen overflow-hidden">
 			<div className="flex flex-col h-screen justify-center">
 				{intros.length > 0 &&
 					intros.map((intro) => <Title key={intro._id} intro={intro} />)}
