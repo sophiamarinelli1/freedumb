@@ -10,21 +10,14 @@ interface Props {
 
 const TextFlash = ({ intro }: Props) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
-	const [bgColor, setBgColor] = useState("bg-blue-600");
-	const [textColor, setTextColor] = useState("text-cream");
+	const [bgColor, setBgColor] = useState("bg-blue");
 
 	useEffect(() => {
 		const colorInterval = setInterval(() => {
 			setBgColor((prevColor) =>
 				prevColor === "bg-blue" ? "bg-dark" : "bg-blue"
 			);
-		}, 25); // Change color every 250 milliseconds (1/4 of a second)
-
-		const textColorInterval = setInterval(() => {
-			setTextColor((prevColor) =>
-				prevColor === "text-cream" ? "text-white" : "text-cream"
-			);
-		}, 15);
+		}, 50); // Change color every 250 milliseconds (1/4 of a second)
 
 		const textInterval = setInterval(() => {
 			setCurrentIndex((prevIndex) => (prevIndex + 1) % intro.fragments.length);
@@ -33,12 +26,11 @@ const TextFlash = ({ intro }: Props) => {
 		return () => {
 			clearInterval(colorInterval); // Clean up color interval
 			clearInterval(textInterval);
-			clearInterval(textColorInterval);
 		};
 	}, [intro.fragments.length]);
 	return (
 		<div
-			className={`w-full h-screen overflow-hidden ${bgColor} flex justify-center items-center text-xl text-center font-customBlack ${textColor}`}
+			className={`w-full h-screen overflow-hidden ${bgColor} flex justify-center items-center text-xl text-center font-customBlack text-yellow`}
 			key={intro._id}>
 			<div className="w-3/4">
 				<p className="uppercase drop-shadow-1xl">

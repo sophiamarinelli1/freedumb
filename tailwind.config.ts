@@ -9,12 +9,14 @@ const config: Config = {
 	theme: {
 		fontFamily: {
 			customBlack: ["ABCArizonaMix-Bold-Trial"],
+			customBold: ["HelveticaNeueLTStd-Bd"],
 		},
 		colors: {
 			white: "#ffffff",
 			cream: "#e1e1e1",
-			blue: "#13237D",
+			blue: "#0C24AD",
 			dark: "#08176A",
+			yellow: "#EFFF92",
 		},
 		extend: {
 			fontSize: {

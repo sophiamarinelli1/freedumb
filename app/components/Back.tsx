@@ -5,7 +5,7 @@ const Back = () => {
 	return (
 		<Link
 			href={`/`}
-			className="w-full p-8 fixed flex flex-row justify-center gap-2 top-0 text-center text-cream uppercase z-[50]">
+			className="w-full font-customBold mt-32 fixed flex flex-row justify-center gap-2 top-0 text-center text-cream uppercase z-[50]">
 			<div>Back</div>
 		</Link>
 	);

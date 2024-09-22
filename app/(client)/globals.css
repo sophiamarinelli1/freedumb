@@ -7,6 +7,11 @@
 	src: url("../fonts/ABCArizonaMix-Bold-Trial.woff2");
 }
 
+@font-face {
+	font-family: "HelveticaNeueLTStd-Bd.woff2";
+	src: url("../fonts/HelveticaNeueLTStd-Bd.woff2");
+}
+
 .no-scrollbar::-webkit-scrollbar {
 	display: none;
 }
